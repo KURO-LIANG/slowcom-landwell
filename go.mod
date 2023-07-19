@@ -1,4 +1,4 @@
-module github.com/KURO-LIANG/slowcom-landwell
+module github.com/kuro-liang/slowcom-landwell
 
 go 1.18
 
