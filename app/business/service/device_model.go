@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/google/go-querystring/query"
-	"slowcom-landwell/app/business/entity"
-	"slowcom-landwell/http"
+	"github.com/kuro-liang/slowcom-landwell/app/business/entity"
+	"github.com/kuro-liang/slowcom-landwell/http"
 )
 
 type DeviceModelRequest struct {

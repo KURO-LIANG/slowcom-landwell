@@ -3,7 +3,7 @@ package http
 import (
 	"encoding/json"
 	"github.com/ddliu/go-httpclient"
-	"slowcom-landwell/serror"
+	"github.com/kuro-liang/slowcom-landwell/serror"
 )
 
 type LandwellBaseResponse struct {

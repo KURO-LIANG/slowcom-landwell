@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"slowcom-landwell/app/business/entity"
-	"slowcom-landwell/app/business/service"
-	"slowcom-landwell/config"
-	"slowcom-landwell/http"
+	"github.com/kuro-liang/slowcom-landwell/app/business/entity"
+	"github.com/kuro-liang/slowcom-landwell/app/business/service"
+	"github.com/kuro-liang/slowcom-landwell/config"
+	"github.com/kuro-liang/slowcom-landwell/http"
 )
 
 func main() {
