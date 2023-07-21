@@ -10,7 +10,7 @@ type PlanEvaluationReq struct {
 	TeamName    string `json:"teamName"`    // 班组名称，非模糊查询
 	DeviceName  string `json:"deviceName"`  // 设备名称，非模糊查询
 	PlaceName   string `json:"placeName"`   // 地点名称，非模糊查询
-	PlanMode    int    `json:"planMode"`    // 计划模式，0常规1排班2星期3周期
+	PlanMode    string `json:"planMode"`    // 计划模式，0常规1排班2星期3周期
 	PlanState   string `json:"planState"`   // 考核状态，（准时、未到、错序）
 	SearchChild bool   `json:"searchChild"` // 是否查询子部门，true为是，false为否
 	PageIndex   int    `json:"pageIndex"`   // 分页参数，第几页（从1开始）
