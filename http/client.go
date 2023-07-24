@@ -51,7 +51,7 @@ func (s *LandwellClient) Post(url, data interface{}) (response *LandwellResponse
 
 // PutJson json请求
 func (s *LandwellClient) PutJson(url, data interface{}) (response *LandwellResponse, err error) {
-	res, err := buildHttpClient().WithHeader("Content-Type", "application/x-www-form-urlencoded").PutJson(fmt.Sprintf("%s%s", s.BaseUrl, url), data)
+	res, err := buildHttpClient().PutJson(fmt.Sprintf("%s%s", s.BaseUrl, url), data)
 	if err != nil {
 		return
 	}
