@@ -42,6 +42,7 @@ func (s *DeviceModelRequest) Add(req *entity.DeviceModelAddReq) (resData *entity
 	if err != nil {
 		return
 	}
+	resData = new(entity.DeviceModelAddRes)
 	resData.Id = res.Data
 	return
 }

@@ -42,6 +42,7 @@ func (s *UserModelRequest) Add(req *entity.UserModelAddReq) (resData *entity.Use
 	if err != nil {
 		return
 	}
+	resData = new(entity.UserModelAddRes)
 	resData.Id = res.Data
 	return
 }

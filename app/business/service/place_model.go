@@ -42,6 +42,7 @@ func (s *PlaceModelRequest) Add(req *entity.PlaceModelAddReq) (resData *entity.P
 	if err != nil {
 		return
 	}
+	resData = new(entity.PlaceModelAddRes)
 	resData.Id = res.Data
 	return
 }

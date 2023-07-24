@@ -51,6 +51,7 @@ func (s *LineModelRequest) Add(req *entity.LineModelAddReq) (resData *entity.Lin
 	if err != nil {
 		return
 	}
+	resData = new(entity.LineModelAddRes)
 	resData.Id = res.Data
 	return
 }

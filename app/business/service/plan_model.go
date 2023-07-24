@@ -42,6 +42,7 @@ func (s *PlanModelRequest) Add(req *entity.PlanModelAddReq) (resData *entity.Pla
 	if err != nil {
 		return
 	}
+	resData = new(entity.PlanModelAddRes)
 	resData.Id = res.Data
 	return
 }
