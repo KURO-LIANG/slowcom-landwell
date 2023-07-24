@@ -21,7 +21,7 @@ func main() {
 		TeamName:    "",
 		DeviceName:  "",
 		PlaceName:   "",
-		PlanMode:    0,
+		PlanMode:    "0",
 		PlanState:   "",
 		SearchChild: false,
 		PageIndex:   1,
@@ -32,5 +32,5 @@ func main() {
 		fmt.Println("请求错误：", err)
 		return
 	}
-	fmt.Println("请求成功 <==", list)
+	fmt.Println("请求成功 <==", &list)
 }

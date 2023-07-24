@@ -34,7 +34,7 @@ func (s *LandwellClient) PostJson(url string, data interface{}) (response *Landw
 		return
 	}
 	response, err = checkResponse(res)
-	fmt.Println(response)
+	fmt.Println(*response)
 	return
 }
 
@@ -45,7 +45,7 @@ func (s *LandwellClient) Post(url, data interface{}) (response *LandwellResponse
 		return
 	}
 	response, err = checkResponse(res)
-	fmt.Println(response)
+	fmt.Println(*response)
 	return
 }
 
@@ -56,7 +56,7 @@ func (s *LandwellClient) PutJson(url, data interface{}) (response *LandwellRespo
 		return
 	}
 	response, err = checkResponse(res)
-	fmt.Println(response)
+	fmt.Println(*response)
 	return
 }
 
@@ -67,7 +67,7 @@ func (s *LandwellClient) Get(url string) (response *LandwellResponse, err error)
 		return
 	}
 	response, err = checkResponse(res)
-	fmt.Println(response)
+	fmt.Println(*response)
 	return
 }
 
@@ -78,6 +78,6 @@ func (s *LandwellClient) Delete(url string) (response *LandwellResponse, err err
 		return
 	}
 	response, err = checkResponse(res)
-	fmt.Println(response)
+	fmt.Println(*response)
 	return
 }
