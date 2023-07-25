@@ -2,9 +2,10 @@ package entity
 
 // UserModelReq 查询人员列表参数
 type UserModelReq struct {
-	DeptNumber string `json:"deptNumber,omitempty"` // 部门编号，不填则查询所有部门
-	UserCard   string `json:"userCard,omitempty"`   // 人员卡号，非模糊查询
-	UserName   string `json:"userName,omitempty"`   // 人员名称，非模糊查询
+	DeptNumber  string `json:"deptNumber,omitempty"`  // 部门编号，不填则查询所有部门
+	UserCard    string `json:"userCard,omitempty"`    // 人员卡号，非模糊查询
+	UserName    string `json:"userName,omitempty"`    // 人员名称，非模糊查询
+	SearchChild bool   `json:"searchChild,omitempty"` // 是否查询子部门，true为是，false为否
 }
 
 // UserModelRes 人员列表返回

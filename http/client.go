@@ -30,49 +30,34 @@ func buildHttpClient() *httpclient.HttpClient {
 // PostJson json请求
 func (s *LandwellClient) PostJson(url string, data interface{}) (response *LandwellResponse, err error) {
 	res, err := buildHttpClient().PostJson(fmt.Sprintf("%s%s", s.BaseUrl, url), data)
-	if err != nil {
-		return
-	}
-	response, err = checkResponse(res)
+	response, err = checkResponse(res, err)
 	return
 }
 
 // Post post普通请求
 func (s *LandwellClient) Post(url, data interface{}) (response *LandwellResponse, err error) {
 	res, err := buildHttpClient().WithHeader("Content-Type", "application/x-www-form-urlencoded").Post(fmt.Sprintf("%s%s", s.BaseUrl, url), data)
-	if err != nil {
-		return
-	}
-	response, err = checkResponse(res)
+	response, err = checkResponse(res, err)
 	return
 }
 
 // PutJson json请求
 func (s *LandwellClient) PutJson(url, data interface{}) (response *LandwellResponse, err error) {
 	res, err := buildHttpClient().PutJson(fmt.Sprintf("%s%s", s.BaseUrl, url), data)
-	if err != nil {
-		return
-	}
-	response, err = checkResponse(res)
+	response, err = checkResponse(res, err)
 	return
 }
 
 // Get get请求
 func (s *LandwellClient) Get(url string) (response *LandwellResponse, err error) {
 	res, err := buildHttpClient().Get(fmt.Sprintf("%s%s", s.BaseUrl, url), netUrl.Values{})
-	if err != nil {
-		return
-	}
-	response, err = checkResponse(res)
+	response, err = checkResponse(res, err)
 	return
 }
 
 // Delete 删除请求
 func (s *LandwellClient) Delete(url string) (response *LandwellResponse, err error) {
 	res, err := buildHttpClient().Delete(fmt.Sprintf("%s%s", s.BaseUrl, url), netUrl.Values{})
-	if err != nil {
-		return
-	}
-	response, err = checkResponse(res)
+	response, err = checkResponse(res, err)
 	return
 }
