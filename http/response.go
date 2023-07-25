@@ -2,6 +2,7 @@ package http
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/ddliu/go-httpclient"
 	"github.com/kuro-liang/slowcom-landwell/serror"
 )
@@ -18,7 +19,7 @@ type LandwellResponse struct {
 // checkResponse 校验请求
 func checkResponse(res *httpclient.Response) (landwellResponse *LandwellResponse, err error) {
 	if res.Response.StatusCode != 200 {
-		return nil, serror.New(res.Response.StatusCode, "请求服务异常")
+		return nil, serror.New(res.Response.StatusCode, fmt.Sprint(res.Response.StatusCode, " 请求服务异常"))
 	}
 	bytes, err := res.ReadAll()
 	if err != nil {
