@@ -19,7 +19,7 @@ type LandwellResponse struct {
 // checkResponse 校验请求
 func checkResponse(res *httpclient.Response, requestError error) (landwellResponse *LandwellResponse, err error) {
 	if requestError != nil {
-		return nil, serror.New(405, fmt.Sprint(requestError.Error(), " 请求超时"))
+		return nil, serror.New(405, "请求服务异常：请求超时")
 	}
 	if res.Response.StatusCode != 200 {
 		return nil, serror.New(res.Response.StatusCode, fmt.Sprint(res.Response.StatusCode, " 请求服务异常"))
