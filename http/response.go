@@ -17,8 +17,8 @@ type LandwellResponse struct {
 
 // checkResponse 校验请求
 func checkResponse(res *httpclient.Response) (landwellResponse *LandwellResponse, err error) {
-	if res.StatusCode != 200 {
-		return nil, serror.New(res.StatusCode, "请求服务异常")
+	if res.Response.StatusCode != 200 {
+		return nil, serror.New(res.Response.StatusCode, "请求服务异常")
 	}
 	bytes, err := res.ReadAll()
 	if err != nil {
