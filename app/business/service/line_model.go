@@ -62,6 +62,7 @@ func (s *LineModelRequest) AddExtd(req *entity.LineExtdAddReq) (resData *entity.
 	if err != nil {
 		return
 	}
+	resData = new(entity.LineModelAddRes)
 	resData.Id = res.Data
 	return
 }
